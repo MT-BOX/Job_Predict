@@ -12,8 +12,9 @@ Boss直聘网站按IT职业分类进行搜索，使用网络爬虫获取网页�
 2.Python 后端
   （1）安装Pycharm Professional版本 https://www.jetbrains.com/pycharm/download/#section=windows
   ![RRWI0W7U@BI`N8O(GKZ{QCY](https://github.com/MT-BOX/Job_Predict/assets/96871554/0be60060-5cb5-4168-8104-156e3f1cf911)
-  
-  （2）Django 4.2.1 
+  （2）Python >3.7
+  （3）Drf(djangorestframework)框架
+      Django 4.2.1 
       主要对Python程序预测的信息进行返回
  
  3.微信小程序云开发
