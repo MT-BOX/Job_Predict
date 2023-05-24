@@ -1,0 +1,18 @@
+<!--pages/choice/choice.wxml-->
+<view class='title'>
+  <text>个人技能键选</text>
+</view>
+<view wx:for="{{activityset}}" wx:key="{{item.ID}}">
+  <view class="optionslist" >
+    <view class="optionname"><rich-text nodes="{{item.act_addondesc}}"></rich-text></view>
+    <view class="divLine"></view>
+    <view wx:for="{{item.act_addonvalue}}" wx:for-item="act_addonvalue" wx:key="id"  class="optionitems {{item['select'+index]==act_addonvalue ? 'chose' : ''}}" >
+      <view class="options"  id="{{item.actsetid}}" data-idx="{{index}}" data-name="{{act_addonvalue}}" bindtap="{{item['select'+index]==act_addonvalue ? 'deletvalue' : 'seletvalue'}}">{{act_addonvalue}}</view>
+    </view>
+    <input value="{{item.act_addondesc}}" name="choicename{{index}}" style="display:none;"></input>
+    <input value="{{item.selected}}" name="choices{{index}}" style="display:none;"></input>
+  </view>
+</view>
+<view>
+  <button class='sure' bindtap="predict" type="primary">保存并预测</button>
+</view>

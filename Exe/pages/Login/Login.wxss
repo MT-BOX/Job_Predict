@@ -1,0 +1,85 @@
+/* pages/Login/Login.wxss */
+
+page{ 
+    height: 90%; 
+   } 
+   .container { 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    padding: 0; 
+    box-sizing: border-box; 
+    /* background-color: rgb(156, 23, 78) */
+   }
+  
+  /*登录图片*/
+    
+   .login-img{ 
+    margin-top:70px;
+    margin-left: 120px;
+    width: 230rpx;
+    height: 200rpx;
+   } 
+  
+   .background {
+    width: 100%;
+    height: 100%;
+    position:fixed; 
+    background-size:100% 100%;
+    z-index: -1;
+  }
+    
+   /*表单内容*/
+    
+   .inputView { 
+    /* background-color: #fff;  */
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 45px; 
+    border-radius:20px;
+    border:1px solid #999999;
+   } 
+    
+   /*输入框*/
+   .nameImage, .keyImage { 
+    margin-left: 20px; 
+    margin-top: 15px;
+    width: 15px; 
+    height: 13px
+   } 
+    
+   .loginLab { 
+    margin: 15px 15px 15px 15px; 
+    color: #545454; 
+    font-size: 14px
+   } 
+    
+   .inputText { 
+    flex: block; 
+    float: right; 
+    text-align: right; 
+    margin-right: 22px; 
+    margin-top: 11px;
+    color: #191970; 
+    font-size: 14px
+   } 
+   .line { 
+    margin-top: 8px; 
+   } 
+  
+    
+   /*按钮*/
+  /* background-color:#DCDCDC;  */
+  .loginBtnView { 
+    width: 80%; 
+    height: auto; 
+    margin-left: 30px; 
+   }
+    
+  .loginBtn { 
+    width: 80%; 
+    margin-top: 10px; 
+    border-radius:10px;
+    background-color: #00FF00;
+    color: #FFFAFA;
+   }

@@ -1,0 +1,30 @@
+<!--pages/Login/Login.wxml-->
+<view class="container"> 
+    <view class="content">
+    <!--pics文件夹下的background.jpg文件-->
+    <image class='background' src="https://7a68-zhike-0g3asztle60f83ad-1318090783.tcb.qcloud.la/tabbar/background.png?sign=12692f2aeb21fff5afb1fb5495c31983&t=1684827878"></image>
+    <!--页面其它部分-->
+    </view>
+    <image class="login-img" src="https://7a68-zhike-0g3asztle60f83ad-1318090783.tcb.qcloud.la/pic_it.png?sign=ec147693ac53b113ad951ce6a0afa975&t=1684827783"></image> 
+
+    <!--账号-->
+    <view class="inputView"> 
+    <image class="nameImage" src="https://7a68-zhike-0g3asztle60f83ad-1318090783.tcb.qcloud.la/pic_id.png?sign=bea62e2cda047699d0ef0f18585875b6&t=1684827726"></image> 
+    <label class="loginLab">账号</label> 
+    <input class="inputText" value="{{username}}" placeholder="请输入账号" bindinput="bindusername" /> 
+    </view> 
+    <view class="line"></view> 
+
+    <!--密码-->
+    <view class="inputView"> 
+    <image class="keyImage" src="https://7a68-zhike-0g3asztle60f83ad-1318090783.tcb.qcloud.la/pic_key.png?sign=1b3e9e51d1559f12cfb29ebab2a6b51a&t=1684827842"></image> 
+    <label class="loginLab">密码</label> 
+    <input class="inputText" value="{{password}}" password="true" placeholder="请输入密码" bindinput="bindpassword" /> 
+    </view> 
+
+    <!--按钮-->
+    <view class="loginBtnView"> 
+      <button class="loginBtn" bindtap="login">登录/注册</button> 
+    </view>
+</view>
+

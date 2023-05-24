@@ -1,0 +1,50 @@
+<!--pages/correct/correct.wxml-->
+<form bindsubmit="formSubmit" report-submit="true">
+<view class='title'>
+  <text>账号个人资料</text>
+</view>
+<!--姓名-->  
+<view class="section">
+  <view class="section-title">姓名：</view>
+  <view>
+    <input type="text" name="username" value="{{count.name}}" placeholder="请输入姓名" bindinput="getname"/>
+  </view>
+</view>
+<!--性别--> 
+<view class="section">
+  <view class="section-title">性别：</view>
+  <view>
+    <radio-group name="gender" bindchange="getsex">
+      <label><radio value="男" />男</label>
+      <label><radio value="女"/>女</label>
+    </radio-group>
+  </view>
+</view>
+<!--年龄-->  
+<view class="section">
+  <view class="section-title">年龄：</view>
+  <view>
+    <input type="text" name="userage" value="{{count.age}}" placeholder="请输入年龄" bindinput="getage"/>
+  </view>
+</view>
+<!--邮箱-->  
+<view class="section">
+  <view class="section-title">邮箱：</view>
+  <view>
+    <input type="text" name="useremail" value="{{count.email}}" placeholder="请输入邮箱" bindinput="getemail"/>
+  </view>
+</view>
+<!--学历-->  
+<view class="section">
+    <view class="section-title">学历：</view>
+      <view class='select_box'>
+        <view class='select' catchtap='selectTaps'>
+            <text class='select_text'>{{selectDatas[indexs]}}</text>
+        </view>
+        <view class='option_box' style='height:{{shows?(selectDatas.length>5?300:selectDatas.length*60):0}}rpx;'>
+            <text class='option' style='{{indexs==selectDatas.length-1&&"border:0;"}}' wx:for='{{selectDatas}}' wx:key='this' data-index='{{index}}' data-edu='{{selectDatas[index]}}' catchtap='optionTaps'>{{item}}</text>
+        </view>
+      </view>
+</view>
+  <button class='save' type="primary" bindtap="save">保存</button>
+</form>

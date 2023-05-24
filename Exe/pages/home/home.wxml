@@ -1,0 +1,34 @@
+<!--pages/home/home.wxml-->
+
+<image class='top' src="https://7a68-zhike-0g3asztle60f83ad-1318090783.tcb.qcloud.la/tabbar/jt.png?sign=b3fc627782d0521b61a58c370d152c78&t=1684828213" mode="aspectFill"></image>
+<view class='home'>
+   <view wx:if="{{isok}}">
+      <text class='title1'>你未进行技能键选无法进行预测</text>
+      <image class="nameImage" src="https://7a68-zhike-0g3asztle60f83ad-1318090783.tcb.qcloud.la/tabbar/none.png?sign=537a1dd949bd7f77041d855057b68e59&t=1684828193"></image> 
+      <button class='bt' bindtap="collect">获取技能并预测</button>
+   </view>
+   <view wx:else>
+      <text class='title1'>你的预测结果如下</text>
+      <view class="jobret">
+                  <text class='jobn'>职业名称</text>
+                  <text class='jobp'>概率</text>
+      </view>
+      <view class="joblist">
+            <block wx:for="{{jobresult}}">
+            <view class="divLine"></view>
+            <view class="jobres">
+               <view class='result' data-name="{{item[0]}}" bindtap="getmessage">
+                  <view class='ft'>
+                     <text class='jobname'>{{item[0]}}</text>
+                     <image class='imgt' src="../../static/jop/{{item[0]}}.png"></image>
+                  </view>
+                  <view class='tops'>
+                     <view class="jobpro">{{item[1]}}%</view>
+                  </view>
+               </view>
+            </view>
+            </block>
+      </view>
+      <button class='bt' bindtap="collect">重新获取技能并预测</button>
+   </view>
+</view>

@@ -1,0 +1,76 @@
+/* pages/ckey/ckey.wxss */
+page {
+      background-color: #eee;
+      font-size: 28rpx;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: rgb(240, 10, 79);
+    font-size: 60rpx;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.container {
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+
+.top {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15rpx;
+    box-shadow: 0 5rp 5rp #e9e9e9;
+}
+
+.one_list {
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    height: 90rpx;
+    line-height: 90rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.input {
+    width: 450rpx;
+}
+
+.x {
+    width: 34rpx;
+    height: 34rpx;
+    border-radius: 50%;
+    background-color: #999;
+    color: #fff;
+    text-align: center;
+    line-height: 34rpx;
+    font-size: 24rpx;
+    float: right;
+}
+
+.x_line {
+    width: 100%;
+    height: 1px;
+    background-color: #eee;
+}
+
+.change{
+    display: flex;
+    align-items: center
+}
+
+.btn {
+    width: 100%;
+    height: 90rpx;
+    text-align: center;
+    line-height: 90rpx;
+    color: #fff;
+    margin-top: 40rpx;
+    background: linear-gradient(to right, #22a0ff, #007ce7);
+    border-radius: 15rpx;
+    box-shadow: 0 5rpx 5rpx #8ccaf6;
+}

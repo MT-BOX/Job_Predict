@@ -1,0 +1,39 @@
+<!--pages/ckey/ckey.wxml-->
+<view class='container'>
+  <view class='title'>
+    <text>账号密码重置</text>
+  </view>
+    <view class='top'>
+      <view class='one_list'>
+        <view class='change'>
+          <view class=''>旧密码：</view>
+          <view>
+            <input placeholder="请输入旧密码" maxlength='20' value="{{oldkey}}" bindinput="setold"></input>
+          </view>
+        </view>
+        <view class='x'>✖</view>
+      </view>
+      <view class='x_line'></view>
+      <view class='one_list'>
+        <view class='change'>
+          <view class=''>新密码：</view>
+          <view>
+            <input placeholder="请输入新密码" maxlength='20' value="{{newkey}}" bindinput="setnew"></input>
+          </view>
+        </view>
+        <view class='x'>✖</view>
+      </view>
+      <view class='x_line'></view>
+      <view class='one_list'>
+        <view class='change'>
+          <view class=''>确认密码：</view>
+          <view>
+            <input placeholder="请再次输入新密码" maxlength='20' value="{{setkey}}" bindinput="setset"></input>
+          </view>
+        </view>
+        <view class='x'>✖</view>
+      </view>
+
+    </view>
+    <view class='btn' bindtap="correctkey">确定</view>
+</view>

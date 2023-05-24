@@ -1,0 +1,35 @@
+{
+    "pages": [
+        "pages/Login/Login",
+        "pages/home/home",
+        "pages/single/single",
+        "pages/correct/correct",
+        "pages/ckey/ckey",
+        "pages/choice/choice",
+        "pages/message/message"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#00868B",
+        "navigationBarTitleText": "职客",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "selectedColor": "#00BFFF",
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "static/tabbar/pic_home_out.png",
+                "selectedIconPath": "static/tabbar/pic_home_on.png"
+            },
+            {
+                "pagePath": "pages/single/single",
+                "text": "我的",
+                "iconPath": "static/tabbar/pic_single_out.png",
+                "selectedIconPath": "static/tabbar/pic_single_on.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

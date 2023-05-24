@@ -1,0 +1,287 @@
+/* pages/message/message.wxss */
+.background {
+    width: 100%;
+    height: 100%;
+    position:fixed; 
+    background-size:100% 100%;
+    z-index: -1;
+  }
+.fie {
+    display: flex;
+    flex-direction: row;
+}
+.ext{
+    display: flex;
+    flex-direction: column;
+}
+.ti{
+    display: flex;
+    margin-top: 10px;
+    width: 150px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: rgb(18, 168, 228);
+    font-size: 45rpx;
+}
+.jobname{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 150px;
+    font-family:Cursive;
+    font-size: 50rpx;
+    font-weight:bold
+}
+.mgt{
+    width: 200px;
+    height: 70px;
+}
+.introduce{
+    font-family:Serif;
+    font-size: 30rpx;
+    font-weight:lighter
+}
+.con{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-family:Cursive;
+    font-size: 45rpx;
+    font-weight:bold
+}
+.cot{
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-family:Serif;
+    font-size: 35rpx;
+    font-weight:bolder
+}
+.optionitems{
+    display: inline-block;
+    margin:8rpx 12rpx;
+    padding:0rpx 0rpx 4rpx;
+    background: #fff;
+    font-size:32rpx;
+    box-shadow: 6rpx 10rpx 10rpx #DCDCDC;/*for Android*/
+    -webkit-box-shadow:6px 10px 10px #DCDCDC;/*for IOS*/
+    border-radius: 10rpx;
+  }
+.options{
+    margin:4rpx 0rpx;
+    padding:20rpx;
+ }
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.ct{
+    font-family:Serif;
+    font-size: 30rpx;
+    font-weight:lighter
+}
+.title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    margin-left: 10px;
+    color: rgb(230, 111, 13);
+    font-size: 40rpx;
+}
+.coos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+}
+  /* 下拉框 */
+  .select_box {
+    background: #fff;
+    width: 620rpx;
+    /* margin: 0 auto; */
+    height: 50rpx;
+    display: flex;
+    align-items: center;
+    line-height: 90rpx;
+    text-align: left;
+    position: relative;
+  }
+  
+  .select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    margin-left: 20px;
+    /* border: 1px solid #efefef; */
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx;
+  }
+  
+  .select_text {
+    flex: 1;
+    color: rgb(102, 102, 102);
+    line-height: 86rpx;
+    height:30px;
+  }
+  
+  .option_box {
+    position: absolute;
+    top: 86rpx;
+    width: 100px;
+    margin-left: 20px;
+    /* border: 1px solid #efefef; */
+    box-sizing: border-box;
+    height: 0;
+    overflow-y: auto;
+    border-top: 0;
+    background: #fff;
+    transition: height 0.3s;
+    z-index: 100;
+  }
+  
+  .option {
+    display: block;
+    line-height: 40rpx;
+    border-bottom: 1px solid #efefef;
+    padding: 10rpx;
+    color: rgb(102, 102, 102);
+  }
+.ty{
+    margin-right: 2px;
+    border-color: brown;
+    border-style: dotted;
+}
+.te{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.t1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: aqua;
+    width: 10%;
+    height: 20px;
+    font-size: 35rpx;
+}
+.t2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(26, 241, 19);
+    width: 20%;
+    height: 20px;
+    font-size: 35rpx;
+}
+.t3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(241, 171, 19);
+    width: 30%;
+    height: 20px;
+    font-size: 35rpx;
+}
+.t4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(241, 34, 19);
+    width: 40%;
+    height: 20px;
+    font-size: 35rpx;
+}
+.redmap{
+    width: 100%;
+}
+.jobword{
+    width: 100%;
+}
+.salary{
+    width: 100%;
+}
+.choose{
+    display: flex;
+    flex-direction: row;
+}
+.bt{
+    font-size: 40rpx;
+    background-color: #fff;
+    box-shadow: 6rpx 10rpx 10rpx #DCDCDC;/*for Android*/
+    -webkit-box-shadow:6px 10px 10px #DCDCDC;/*for IOS*/
+}
+.joblist{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border-color: rgb(139, 124, 124);
+    border-style: dashed;
+}
+.divLine{
+    margin-top: 10px;
+    background: #b6bda9;
+    width: 100%;
+    height: 3rpx;
+}
+.divLinet{
+    background: #6dbbe9;
+    width: 100%;
+    height: 3rpx;
+}
+.job{
+    margin-top: 5px;
+}
+.s{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+}
+.jobtitle{
+    margin-top: 5px;
+    margin-left: 5px;
+    color: rgb(15, 233, 26);
+    font-size: 35rpx;
+}
+.company{
+    margin-top: 5px;
+    color: rgb(15, 233, 26);
+    font-size: 35rpx;
+}
+.ss{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.salarym{
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(233, 22, 15);
+    font-size: 30rpx;
+}
+.condition{
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(99, 87, 87);
+    font-size: 30rpx;
+}
+.area{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(114, 102, 102);
+    font-size: 30rpx;
+}
+.t{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgb(114, 102, 102);
+    font-size: 25rpx;
+}
+.skill{
+    margin-left: 5px;
+}

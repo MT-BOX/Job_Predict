@@ -1,0 +1,93 @@
+<!--pages/message/message.wxml-->
+<image class='background' src="https://7a68-zhike-0g3asztle60f83ad-1318090783.tcb.qcloud.la/tabbar/back.png?sign=36caf4c06a033a6c018d7886cdf36950&t=1684828299" mode="aspectFill"></image>
+
+<view class='jobrif'>
+    <view class='fie'>
+        <view class='ext'>
+            <view class='ti'>【职业信息】</view>
+            <view class='jobname'>{{jobname}}</view>
+        </view>
+        <image class='mgt' src="../../static/jop/{{jobname}}.png" ></image>
+    </view>
+     <view class='introduce'>---{{jobrif.introduce}}</view>
+     <view class='con'>工作内容</view>
+     <view class='cot'>一般{{jobname}}工作内容有：</view>
+     <view class='content'>
+        <block wx:for="{{jobrif.content}}">
+               <text class='ct'>>>·{{item}}</text>
+        </block>
+     </view>
+</view>
+<view>
+     <view class='ti'>【职业行情】</view>
+     <text class='title'>职位技能词云图->【{{jobname}}】</text>
+     <view class='ty'>
+        <image class="jobword" src="../../static/pic/word/{{jobname}}.png"></image> 
+     </view>
+     <text class='title'>全国热力图->【{{jobname}}】</text>
+     <view class='ty'>
+        <view class='te'>
+            <text class='t1'>10%</text >
+            <text  class='t2'>20%</text >
+            <text  class='t3'>30%</text >
+            <text  class='t4'>40%</text >
+        </view>
+        <image class="redmap" src="../../static/pic/Red/{{jobname}}.png"></image> 
+     </view>
+     <text class='title'>学历饼状图->【{{jobname}}】</text>
+     <view class='ty'>
+        <image class="redmap" src="../../static/pic/Education/{{jobname}}.png"></image> 
+     </view>
+     <text class='title'>薪资预测->【{{jobname}}】</text>
+     <view class='ty'>
+        <image class="salary" src="../../static/pic/Salary/{{jobname}}-{{city}}{{edu}}.png"></image> 
+    </view>
+    <view class='coos'>
+        <view class='select_box'>
+            <view class='select' catchtap='selectTapscity'>
+                <text class='select_text'>{{selectcity[index1]}}</text>
+            </view>
+            <view class='option_box' style='height:{{shows1?(selectcity.length>5?300:selectcity.length*60):0}}rpx;'>
+                <text class='option' style='{{indexs==selectcity.length-1&&"border:0;"}}' wx:for='{{selectcity}}' data-index='{{index}}' data-city='{{selectcity[index]}}' catchtap='optioncity'>{{item}}</text>
+            </view>
+        </view>
+        <view class='select_box'>
+            <view class='select' catchtap='selectTapsedu'>
+                <text class='select_text'>{{selectedu[index2]}}</text>
+            </view>
+            <view class='option_box' style='height:{{shows2?(selectedu.length>5?300:selectedu.length*60):0}}rpx;'>
+                <text class='option' style='{{indexs==selectedu.length-1&&"border:0;"}}' wx:for='{{selectedu}}' data-index='{{index}}' data-edu='{{selectedu[index]}}' catchtap='optionedu'>{{item}}</text>
+            </view>
+        </view>
+    </view>
+    <text class='title'>建议掌握的技能</text>
+     <view class='ty'>
+        <view wx:for="{{jobexe}}" class="optionitems">
+        <view class="options">{{item}}</view>
+        </view>
+     </view>
+</view>
+<text class='ti'>【职位推荐】</text>
+<view class='joblist'>
+    <block wx:for="{{joblist}}">
+        <view class='job' hrf='{{item.job_url}}'>
+            <view class='s'>
+                <text class='jobtitle'>{{item.job_title}}...</text>
+                <text class='company'>{{item.company_title}}</text>
+            </view>
+            <view class="divLinet"></view>
+            <view class='s'>
+                <view class='ss'>
+                    <text class='salarym' >{{item.salary}}</text>
+                    <text class='condition' >{{item.condition}}</text>
+                </view>
+                <text class='area'>[{{item.job_area}}]</text>
+            </view>
+            <view class='t'>
+                <text class='skill'>{{item.skill}}...</text>
+                <text class='welfare' >{{item.welfare}}...</text>
+            </view>
+        </view>
+    <view class="divLine"></view>
+    </block>
+</view>
