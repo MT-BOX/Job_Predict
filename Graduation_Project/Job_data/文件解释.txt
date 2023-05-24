@@ -1,0 +1,19 @@
+Job_csv    		存取Boss直聘网站上爬取的22个职业网页信息并分类保存在csv文件里
+job_conduct  		保存相关职业的简单定义和基本工作内容
+area_txt   			保存统计好的各个职业的职位信息城市量，用于制作热力图
+location  			通过百度API对城市信息进行经纬度重构，保存为json文件，用于制作热力图
+salary   			通过薪资分析得到的个职业（全国，北京，上海，深圳，其它）的薪资情况，用于制作折线图
+weights 			通过模型计算出的各职业特征向量的值和权重
+word_txt  		统计出的个职业技能点的频次信息
+pic   Red   		通过百度地图建立的城市招聘信息热力图
+pic   word  		对各职业进行分析得到的词云图
+File  Boss_jobitem.csv 	对爬取的数据进行数据清洗和转换后的所以招聘信息
+File  职业.txt 		22个职业名称
+File  skill.txt                             经过同义词处理后的所有的技能点
+File  welfare.txt                       所有福利点
+data job_briefly.pickle            职业描述的直读式文件
+data job_count.pickle             职业招聘信息条目的直读式文件
+data job_dic.pickle                  规格化处理的职业信息直读式文件
+data vector.txt                        得到的全部技能点特征值
+data welfare_count.txt           得到的全部福利特征值
+data vector_weight.pickle       特征值和权重对照的直读式文件

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>百度地图</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style type="">
+			html, body, #map_container {
+				width: 100%;
+				height: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			#map_container {
+				width: 100%;
+				height: 100%;
+			}
+			.anchorBL, .Bmap_cpyCtrl {
+				display: none;
+			}
+		</style>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.0&type=webgl&ak=NA9TwwtcVZIfRdgWZQ5ohMrgvzCS4lFd"></script>
+		<script src="https://mapv.baidu.com/gl/examples/static/common.js"></script>
+		<script src="https://mapv.baidu.com/build/mapv.js"></script>
+		<script src="https://code.bdstatic.com/npm/mapvgl@1.0.0-beta.27/dist/mapvgl.min.js"></script>
+		<!-- 如果使用到Three.js相关的图层需要引用 -->
+		<script src="https://code.bdstatic.com/npm/mapvgl@1.0.0-beta.53/dist/mapvgl.threelayers.min.js"></script>
+
+
+
+	</head>
+	<body>
+	    <div id="map_container"></div>
+	    <script>
+
+	    	var map = initBMap();
+	    	var data = initData();
+	    	setData(data, map);
+	    	//初始化百度地图 common.js快速定义百度地图map对象
+	    	function initBMap(){
+	    		var cityCenter = mapv.utilCityCenter.getCenterByCityName('北京');
+	    		var map = initMap({
+		    		tilt: 0,
+		    		center: [cityCenter.lng, cityCenter.lat],
+		    		zoom: 10,
+		    		style: snowStyle
+		    	})
+		    	return map;
+	    	}
+
+
+    		// 准备数据源
+	    	function initData(){
+		    	var data = [];
+                var i=0;
+                var points=[
+                {"lat":39.910924547299565,"lng":116.4133836971231,"count":39},
+{"lat":31.235929042252014,"lng":121.48053886017651,"count":31},
+{"lat":22.548456637984177,"lng":114.06455183658751,"count":18},
+{"lat":30.578993724029967,"lng":104.07274727406208,"count":12},
+{"lat":30.25308298169347,"lng":120.21551180372168,"count":12},
+{"lat":23.135336306695006,"lng":113.27143134445974,"count":10},
+{"lat":34.34726881662395,"lng":108.94646555063274,"count":9},
+{"lat":31.826577833686887,"lng":117.23344266497664,"count":8},
+{"lat":43.830763204290484,"lng":87.62443993536046,"count":7},
+{"lat":34.75343885045448,"lng":113.63141920733915,"count":6},
+{"lat":36.65655420178723,"lng":117.12639941261048,"count":6},
+{"lat":39.09110259843554,"lng":117.2080927529767,"count":6},
+{"lat":31.303564074441766,"lng":120.59241222959322,"count":6},
+{"lat":26.080429420698078,"lng":119.30346983854001,"count":6},
+{"lat":32.06465288561847,"lng":118.80242172124585,"count":6},
+{"lat":30.598466736400987,"lng":114.31158155473231,"count":5},
+{"lat":38.04829153846363,"lng":114.52140317439488,"count":5},
+{"lat":26.653324822309752,"lng":106.63657676352776,"count":4},
+{"lat":37.87698902884778,"lng":112.55639149167204,"count":4},
+{"lat":38.87998776845534,"lng":115.47146383768579,"count":4},
+{"lat":24.485406605176305,"lng":118.09643549976651,"count":4},
+{"lat":23.02775875078891,"lng":113.12851219549718,"count":4},
+{"lat":22.822606601187154,"lng":108.37345082581861,"count":4},
+{"lat":43.82195350104314,"lng":125.3306020759069,"count":3},
+{"lat":31.498809732685714,"lng":120.31858328810601,"count":3},
+{"lat":39.54336666275853,"lng":116.69058173342549,"count":3},
+{"lat":23.02730841164339,"lng":113.75842045787648,"count":3},
+{"lat":28.23488939994364,"lng":112.94547319535287,"count":3},
+{"lat":37.43964182632334,"lng":118.68138493513693,"count":2},
+{"lat":31.98654943120089,"lng":120.90159173866185,"count":2},
+{"lat":35.49628458647257,"lng":112.85857823132879,"count":2},
+{"lat":34.21266655011306,"lng":117.29057543439453,"count":2},
+{"lat":24.879952330498313,"lng":118.68244626680422,"count":2},
+{"lat":32.40067693609037,"lng":119.41941890822997,"count":2},
+{"lat":24.886272111644136,"lng":102.83944512326053,"count":2},
+{"lat":29.65948787983075,"lng":91.17845425628477,"count":2},
+{"lat":20.052113086180366,"lng":110.2067198964201,"count":2},
+{"lat":36.71265155126753,"lng":119.16837791142822,"count":1},
+{"lat":28.68945529506072,"lng":115.86458944231661,"count":1},
+{"lat":36.62338469651661,"lng":101.78445017050855,"count":1},
+{"lat":32.4606750493083,"lng":119.9295663378548,"count":1},
+{"lat":30.68054196371511,"lng":117.50208200570214,"count":1},
+{"lat":38.492460055509596,"lng":106.23849358740017,"count":1},
+{"lat":36.072227496663224,"lng":120.38945519114627,"count":1},
+{"lat":26.672241711408567,"lng":119.55451074542829,"count":1},
+{"lat":41.68383006919066,"lng":123.47109664482264,"count":1},
+{"lat":31.473663048745863,"lng":104.6855618607612,"count":1},
+{"lat":22.013601254764165,"lng":100.80344682455637,"count":1},
+{"lat":40.62714122474678,"lng":109.95979863201062,"count":1},
+{"lat":32.63184739905333,"lng":117.00638885071616,"count":1},
+{"lat":27.835702227135585,"lng":112.95046418076468,"count":1},
+{"lat":34.335476293368586,"lng":108.71542245143303,"count":1},
+{"lat":42.82582436811265,"lng":93.52121554028504,"count":1},
+{"lat":39.63658372414733,"lng":118.18645947203979,"count":1},
+{"lat":34.36891564286998,"lng":107.2445753670404,"count":1},
+{"lat":22.5223146707905,"lng":113.39942236263188,"count":1},
+{"lat":35.11067124236514,"lng":118.36353300501388,"count":1},
+{"lat":30.461746110678995,"lng":106.63955268233484,"count":1},
+{"lat":29.58588653832045,"lng":105.06458802499718,"count":1},
+{"lat":40.84842299711348,"lng":111.75550856170946,"count":1},
+{"lat":29.568996245338923,"lng":106.55843415537664,"count":1},
+{"lat":30.95123323991339,"lng":117.81847679445747,"count":1},
+{"lat":35.43829807753727,"lng":119.45862617085737,"count":1},
+{"lat":34.62426277921943,"lng":112.4594212983115,"count":1},
+{"lat":30.53922247681024,"lng":117.1212827542562,"count":1},
+{"lat":43.93942266533856,"lng":116.05439144074573,"count":1},
+{"lat":37.3881961960769,"lng":117.9774040171467,"count":1},
+{"lat":23.89046855627851,"lng":100.09544042014869,"count":1},
+{"lat":34.60224952526725,"lng":119.22862133316607,"count":1},
+{"lat":31.815795653327836,"lng":119.98148471327892,"count":1},
+{"lat":34.902637080502906,"lng":108.95240424835922,"count":1},
+{"lat":29.866068124069646,"lng":121.63084278185603,"count":1},
+{"lat":30.697446484492378,"lng":111.29254921035434,"count":1},
+{"lat":38.9189536667856,"lng":121.62163148459285,"count":1},
+{"lat":30.39657217331699,"lng":114.90160738827099,"count":1},
+{"lat":27.245270272808565,"lng":111.474432885931,"count":1},
+{"lat":43.84356783457924,"lng":126.55563450495482,"count":1},
+{"lat":26.860657438064884,"lng":100.23246452903453,"count":1},
+{"lat":35.03270691290923,"lng":111.01338945447925,"count":1},
+{"lat":39.73846908071564,"lng":98.50068521606795,"count":1},
+
+];
+		    	while(i<points.length){
+		    		data.push({
+			    		geometry: {
+			    			type: 'Point',
+			    			coordinates: [points[i]['lng'], points[i]['lat']]
+			    		},
+			    		properties: {
+			    			count: points[i]['count']
+			    		}
+			    	});
+                    i++;
+		    	}
+		    	return data;
+	    	}
+
+	    	function setData(data, map){
+	    		//绘制数据源
+		    	//1.生成 mapvgl 视图 View
+		    	var view = new mapvgl.View({map});
+
+		    	//2.初始化Intensity对象
+		    	var intensity = new mapvgl.Intensity({
+		    		min: 0,
+		    		max: 60,
+		    		minSize: 20,
+		    		maxSize: 45,
+		    		gradient: {
+		    			0.1: 'rgba(16,228,246,0.8)',
+		    			0.2: 'rgba(3,243,126,0.8)',
+		    			0.5: 'rgb(248,228,7)',
+		    			0.8:'rgba(241,5,60,0.8)'
+		    		},
+                    opacity:0.01,
+		    	});
+
+		    	//3.初始化 mapvgl 的 PointLayer对象
+		    	var pointLayer = new mapvgl.PointLayer({
+		    		size: function(data){
+		    			console.log(intensity.getSize(data.properties.count));
+		    			return intensity.getSize(data.properties.count)
+		    		},
+		    		color: function(data){
+		    			return intensity.getColor(data.properties.count);
+		    		}
+		    	});
+		    	//3.将 PointLayer 对象加入 View 中
+		    	view.addLayer(pointLayer);
+		    	//4.将data 与 PointLayer 进行绑定
+		    	pointLayer.setData(data);
+	    	}
+
+	    </script>
+	</body>
+</html>
