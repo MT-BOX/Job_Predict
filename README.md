@@ -18,8 +18,8 @@ Boss直聘网站按IT职业分类进行搜索，使用网络爬虫获取网页�
  
  3.微信小程序云开发
   微信开发者工具 1.06.2303330win32-x64
-  注册微信小程序，本小程序的AppID(小程序ID)	wx7566b9566a2b453b
-  小程序基于云数据和存储进行开发 环境ID为zhike-0g3asztle60f83ad
+  注册微信小程序，本小程序的AppID(小程序ID)：wx7566b9566a2b453b
+  小程序基于云数据和存储进行开发 环境ID：zhike-0g3asztle60f83ad
   ![@W 4@0E}4DI0 @$%Z{9V9~W](https://github.com/MT-BOX/Job_Predict/assets/96871554/4a6e908a-eceb-47bd-8f9f-319fdb981cef)
 
  
